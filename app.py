@@ -4,6 +4,7 @@ import streamlit as st
 import calendar
 import plotly.graph_objects as go
 from datetime import datetime
+import openpyxl
 
 st.title("College Budget")
 
@@ -16,6 +17,8 @@ df = pd.read_excel(
     usecols='B:D',
     nrows=13,
 )
+
+workbook = openpyxl.load_workbook('College budget1.xlsx')
 
 year = st.sidebar.number_input("Enter a year:", value=2023, min_value=1, max_value=9999, step=1)
 month = st.sidebar.selectbox("Select a month:", options=range(1,13))
