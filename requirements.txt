@@ -1,6 +1,3 @@
 streamlit 
 pandas
-calendar
 plotly.express
-plotly.graph_objects
-datetime
